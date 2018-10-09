@@ -35,6 +35,7 @@ public class Utilities {
 	
 	public void updateAllPlayers(){
 		for (Player player : Sponge.getServer().getOnlinePlayers()){
+		if(player==null)continue;
 			updateTargetPlayer(player);
 			player.getTabList().setHeaderAndFooter(
 					TextSerializers.FORMATTING_CODE.deserialize(Config.getInstance().getheader()), 
